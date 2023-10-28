@@ -1,0 +1,16 @@
+{
+	"name": "LS_Source_onprem",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=TECHNOOB\\SQLEXPRESS02;initial catalog=AdventureWorks2019;user id=root",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4ZmFhMjcxOC05ZTljLTQzNjItYWNhNi0zZWU0YjliYmVkZWUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-SelfHost",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
