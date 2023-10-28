@@ -1,0 +1,19 @@
+{
+	"name": "DS_Sink_Demo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "demo"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
