@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "sd-adf-poc"
 		},
+		"LS_Sink_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_Sink'"
+		},
 		"LS_Source_onprem_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_Source_onprem'"
@@ -37,6 +41,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"LS_Sink_connectionString": {
+						"value": "[parameters('LS_Sink_connectionString')]"
 					},
 					"LS_Source_onprem_connectionString": {
 						"value": "[parameters('LS_Source_onprem_connectionString')]"

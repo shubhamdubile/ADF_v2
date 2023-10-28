@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "sd-adf-poc"
 		},
+		"LS_Sink_connectionString": {
+			"value": ""
+		},
 		"LS_Source_onprem_connectionString": {
 			"value": ""
 		},
