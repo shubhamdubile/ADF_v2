@@ -51,12 +51,34 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Set variable",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
 			}
 		],
 		"parameters": {
-			"Filetype": {
+			"FileName": {
 				"type": "string",
-				"defaultValue": "Dales"
+				"defaultValue": "SalesOrder"
+			}
+		},
+		"variables": {
+			"FileType": {
+				"type": "String"
 			}
 		},
 		"annotations": []
