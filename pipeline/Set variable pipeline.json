@@ -320,17 +320,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"FileName": {
-				"type": "string",
-				"defaultValue": "SalesOrder"
-			}
-		},
-		"variables": {
-			"FileType": {
-				"type": "String"
-			}
-		},
 		"annotations": []
 	}
 }
