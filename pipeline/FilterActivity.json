@@ -11,6 +11,10 @@
 					"items": {
 						"value": "@pipeline().parameters.InpuArray",
 						"type": "Expression"
+					},
+					"condition": {
+						"value": "@greater(item(),3)",
+						"type": "Expression"
 					}
 				}
 			}
