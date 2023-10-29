@@ -3,10 +3,16 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Filter1",
+				"name": "get more than 3",
 				"type": "Filter",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.InpuArray",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
