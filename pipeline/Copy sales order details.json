@@ -236,7 +236,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_Sink_Demo",
+						"referenceName": "DS_parquet",
 						"type": "DatasetReference"
 					}
 				]
