@@ -556,6 +556,52 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "Delete1",
+						"type": "Delete",
+						"dependsOn": [
+							{
+								"activity": "Copy data1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [
+							{
+								"name": "DeleteFIle",
+								"value": "Deleted file after copy"
+							}
+						],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "DS_Sink_Demo",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"logStorageSettings": {
+								"linkedServiceName": {
+									"referenceName": "LS_Sink",
+									"type": "LinkedServiceReference"
+								},
+								"path": "bronze"
+							},
+							"enableLogging": true,
+							"storeSettings": {
+								"type": "AzureBlobStorageReadSettings",
+								"recursive": true,
+								"wildcardFileName": "*.parquet",
+								"enablePartitionDiscovery": false
+							}
+						}
 					}
 				],
 				"policy": {
@@ -567,7 +613,8 @@
 				"[concat(variables('factoryId'), '/datasets/DS_Source_onPrem')]",
 				"[concat(variables('factoryId'), '/datasets/DS_Sink_Demo')]",
 				"[concat(variables('factoryId'), '/datasets/DS_parquet')]",
-				"[concat(variables('factoryId'), '/datasets/DS_bronze_sink')]"
+				"[concat(variables('factoryId'), '/datasets/DS_bronze_sink')]",
+				"[concat(variables('factoryId'), '/linkedServices/LS_Sink')]"
 			]
 		}
 	]
