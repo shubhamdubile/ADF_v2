@@ -1,0 +1,19 @@
+{
+	"name": "DS_bronze_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
