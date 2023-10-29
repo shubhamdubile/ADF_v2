@@ -318,8 +318,43 @@
 						"enablePartitionDiscovery": false
 					}
 				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Delete1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "FileType",
+					"value": {
+						"value": "@replace(pipeline().parameters.FileName,'Sales','')",
+						"type": "Expression"
+					}
+				}
 			}
 		],
+		"parameters": {
+			"FileName": {
+				"type": "string",
+				"defaultValue": "SalesOrder"
+			}
+		},
+		"variables": {
+			"FileType": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
