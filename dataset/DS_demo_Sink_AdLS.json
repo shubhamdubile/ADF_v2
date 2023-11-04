@@ -1,0 +1,28 @@
+{
+	"name": "DS_demo_Sink_AdLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().FolderName",
+					"type": "Expression"
+				},
+				"fileSystem": "demo"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
