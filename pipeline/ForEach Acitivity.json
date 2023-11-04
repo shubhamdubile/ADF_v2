@@ -84,7 +84,11 @@
 		"parameters": {
 			"OutputFolder": {
 				"type": "array",
-				"defaultValue": "[sink1,sink2,sink3]"
+				"defaultValue": [
+					1,
+					2,
+					3
+				]
 			}
 		},
 		"annotations": []
