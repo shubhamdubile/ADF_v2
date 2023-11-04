@@ -10,6 +10,12 @@
 		},
 		"LS_Source_onprem_connectionString": {
 			"value": ""
+		},
+		"LS_adls2_accountKey": {
+			"value": ""
+		},
+		"LS_adls2_properties_typeProperties_url": {
+			"value": "https://shubhamsaadf.dfs.core.windows.net/"
 		}
 	}
 }

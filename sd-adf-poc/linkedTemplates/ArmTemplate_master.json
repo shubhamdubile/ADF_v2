@@ -15,6 +15,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_Source_onprem'"
 		},
+		"LS_adls2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_adls2'"
+		},
+		"LS_adls2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://shubhamsaadf.dfs.core.windows.net/"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -45,8 +53,14 @@
 					"LS_Sink_connectionString": {
 						"value": "[parameters('LS_Sink_connectionString')]"
 					},
+					"LS_adls2_accountKey": {
+						"value": "[parameters('LS_adls2_accountKey')]"
+					},
 					"LS_Source_onprem_connectionString": {
 						"value": "[parameters('LS_Source_onprem_connectionString')]"
+					},
+					"LS_adls2_properties_typeProperties_url": {
+						"value": "[parameters('LS_adls2_properties_typeProperties_url')]"
 					}
 				}
 			},
