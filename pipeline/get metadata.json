@@ -18,7 +18,12 @@
 						"referenceName": "DS_demo_Source_bronze",
 						"type": "DatasetReference"
 					},
-					"fieldList": [],
+					"fieldList": [
+						"columnCount",
+						"lastModified",
+						"structure",
+						"size"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
