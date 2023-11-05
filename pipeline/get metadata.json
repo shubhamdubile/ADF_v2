@@ -48,7 +48,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@greater(activity('Get Metadata of dataset').output.size,20)",
+						"value": "@greater(activity('Get Metadata of dataset').output.size,1)",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
