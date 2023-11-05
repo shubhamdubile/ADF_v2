@@ -1,6 +1,11 @@
 {
 	"name": "if condition pilpeline",
 	"properties": {
+		"parameters": {
+			"copytooutput1": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
