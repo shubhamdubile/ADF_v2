@@ -1604,12 +1604,32 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"name": "[concat(parameters('factoryName'), '/wait pipeline')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"activities": [
+					{
+						"name": "Wait pipeline",
+						"type": "Wait",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"waitTimeInSeconds": {
+								"value": "@pipeline().parameters.wait",
+								"type": "Expression"
+							}
+						}
+					}
+				],
 				"policy": {
 					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"wait": {
+						"type": "int",
+						"defaultValue": 10
+					}
 				},
 				"annotations": []
 			},
