@@ -1,0 +1,28 @@
+{
+	"name": "DS_ifcodiotion_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"outputfolder": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().outputfolder",
+					"type": "Expression"
+				},
+				"fileSystem": "ifcondition"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
