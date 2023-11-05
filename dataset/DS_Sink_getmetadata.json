@@ -1,0 +1,19 @@
+{
+	"name": "DS_Sink_getmetadata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "getmetedata"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
