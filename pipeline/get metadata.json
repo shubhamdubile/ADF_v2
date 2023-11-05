@@ -44,7 +44,13 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@greater(activity('Get Metadata of dataset').output.size,20)",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
