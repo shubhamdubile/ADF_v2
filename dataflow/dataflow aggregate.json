@@ -47,6 +47,10 @@
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          dpid,",
+				"          {Salary by department} = Salary",
+				"     ),",
 				"     partitionBy('hash', 1)) ~> sink1"
 			]
 		}
