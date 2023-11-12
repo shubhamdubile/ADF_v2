@@ -15,7 +15,7 @@
 			"sinks": [],
 			"transformations": [
 				{
-					"name": "aggregateoperation"
+					"name": "aggregate1"
 				}
 			],
 			"scriptLines": [
@@ -27,8 +27,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> sourceemp",
-				"sourceemp aggregate(groupBy(dpid),",
-				"     dpid = ERROR_FUNCTION('')) ~> aggregateoperation"
+				"sourceemp aggregate(groupBy(dpid)) ~> aggregate1"
 			]
 		}
 	}
