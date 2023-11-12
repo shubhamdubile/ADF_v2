@@ -1,0 +1,33 @@
+{
+	"name": "DS_soruce_dept_v2_mapping",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dept.csv",
+				"folderPath": "input",
+				"fileSystem": "mapping"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "dpid",
+				"type": "String"
+			},
+			{
+				"name": "dpname",
+				"type": "String"
+			}
+		]
+	}
+}

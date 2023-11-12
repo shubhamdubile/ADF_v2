@@ -1,0 +1,21 @@
+{
+	"name": "DS_Source_mapping_dept",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dept.csv",
+				"folderPath": "input",
+				"fileSystem": "mapping"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
