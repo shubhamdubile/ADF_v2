@@ -12,8 +12,20 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DS_sink_mapping",
+						"type": "DatasetReference"
+					},
+					"name": "sinkmapping"
+				}
+			],
+			"transformations": [
+				{
+					"name": "filter"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          id as string,",
@@ -22,7 +34,17 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 filter(equals(dpid,'2')) ~> filter",
+				"filter sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     filePattern:'filter',",
+				"     umask: 0222,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     quoteAll: true) ~> sinkmapping"
 			]
 		}
 	}
