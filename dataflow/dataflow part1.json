@@ -50,7 +50,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> sourcedept",
-				"sourceemp, sourcedept join(id == ERROR_FUNCTION(''),",
+				"sourceemp, sourcedept join(id == sourcedept@dpid,",
 				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
