@@ -20,15 +20,17 @@
 			],
 			"scriptLines": [
 				"source(output(",
-				"          id as string,",
+				"          id as short,",
 				"          name as string,",
-				"          dpid as string",
+				"          dpid as short,",
+				"          salary as short",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
+				"     validateSchema: true,",
+				"     inferDriftedColumnTypes: true,",
 				"     ignoreNoFilesFound: false) ~> sourceemp",
 				"sourceemp aggregate(groupBy(dpid),",
-				"     Salary = ERROR_FUNCTION('')) ~> aggregate1"
+				"     Salary = sum(salary)) ~> aggregate1"
 			]
 		}
 	}
