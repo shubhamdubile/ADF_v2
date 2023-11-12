@@ -27,7 +27,8 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> sourceemp",
-				"sourceemp aggregate(groupBy(dpid)) ~> aggregate1"
+				"sourceemp aggregate(groupBy(dpid),",
+				"     Salary = ERROR_FUNCTION('')) ~> aggregate1"
 			]
 		}
 	}
